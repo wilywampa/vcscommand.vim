@@ -1390,6 +1390,8 @@ com! -nargs=* VCSStatus call s:ExecuteVCSCommand('Status', [<f-args>])
 com! -nargs=* VCSUnlock call s:MarkOrigBufferForSetup(s:ExecuteVCSCommand('Unlock', [<f-args>]))
 com! -nargs=0 VCSUpdate call s:MarkOrigBufferForSetup(s:ExecuteVCSCommand('Update', []))
 com! -nargs=* VCSVimDiff call s:VCSVimDiff(<f-args>)
+com! -nargs=* Diff call s:VCSVimDiff(<f-args>)
+com! -nargs=* Log call s:ExecuteVCSCommand('Log', [<f-args>])
 
 " Section: VCS buffer management commands {{{2
 com! VCSCommandDisableBufferSetup call VCSCommandDisableBufferSetup()
